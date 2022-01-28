@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/destination.css" />
+    <title>Space Tourism</title>
+
+    <header>
+      <div class="logo-container">
+        <img src="./assets/home/Group 2.png" alt="Home Logo" class="logo" />
+        <hr />
+      </div>
+
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li class="nav-btn" onclick="transitionToPage('index.html')">
+            00 HOME
+          </li>
+          <li
+            class="nav-btn active"
+            onclick="transitionToPage('destination.html')"
+          >
+            01 DESTINATION
+          </li>
+          <li class="nav-btn" onclick="transitionToPage('crew.html')">
+            02 CREW
+          </li>
+          <li class="nav-btn" onclick="transitionToPage('technology.html')">
+            03 TECHNOLOGY
+          </li>
+        </ul>
+      </div>
+    </header>
+  </head>
+
+  <body>
+    <main>
+      <img
+        src="./assets/destination/background-destination-desktop.png"
+        alt="background-image"
+        class="background-image"
+      />
+
+      <div class="first-text">
+        <h3>01</h3>
+        PICK YOUR DESTINATION
+      </div>
+
+      <div class="content-container">
+        <div class="img-container">
+          <img src="./assets/destination/image-moon.webp" />
+        </div>
+
+        <div class="nav-destination">
+          <ul class="nav-destination-links">
+            <li class="nav-destination-btn active" onclick="">HOME</li>
+            <li class="nav-destination-btn" onclick="">DESTINATION</li>
+            <li class="nav-destination-btn" onclick="">CREW</li>
+            <li class="nav-destination-btn" onclick="">TECHNOLOGY</li>
+          </ul>
+
+          <div class="title-desc-container">
+            <div class="title-destination">MOON</div>
+            <div class="destination-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              inventore laborum vel fuga eum nisi. Ut, ab velit illo, aspernatur
+              omnis incidunt deserunt dolorum fugiat perspiciatis impedit sequi
+              beatae similique.
+            </div>
+
+            <hr />
+            <div class="details-container">
+              <div class="details">
+                <p class="detail-title">AVG. DISTANCE</p>
+                <p class="detail-content">386,000 KM</p>
+              </div>
+
+              <div class="details">
+                <p class="detail-title">EST. TRAVEL TIME</p>
+                <p class="detail-content">3 DAYS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./js/script.js"></script>
+</html>

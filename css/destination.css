@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+
+:root {
+  --backgroundColor: #0b0d17;
+  --subTextColor: #d0d6f9;
+  --text: #fff;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: "Bellefair", sans-serif;
+  list-style-type: none;
+  color: var(--text);
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.5s;
+  background-color: black;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.line {
+  width: 25%;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  padding: 50px 0 10px 50px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 75px;
+  background-color: rgba(124, 124, 124, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.logo-container hr {
+  position: relative;
+  border: 1px solid rgba(124, 124, 124, 0.5);
+  width: 100%;
+  left: 15px;
+  z-index: 1;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  border-bottom: 2px solid #aaa;
+}
+
+.nav-btn:active {
+  border-bottom: 2px solid #fff;
+}
+
+.active {
+  border-bottom: 2px solid #fff;
+}
+
+.first-text {
+  position: relative;
+  top: 100px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  font-size: 30px;
+  color: var(--text);
+}
+
+.first-text h3 {
+  color: #aaa;
+  margin-right: 20px;
+  font-family: "Belleair";
+  font-size: 30px;
+}
+
+.content-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  top: 200px;
+}
+
+.nav-destination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  flex-wrap: wrap;
+  margin-left: 15%;
+  margin-bottom: 10%;
+}
+
+.img-container {
+  margin-left: 15%;
+}
+
+.nav-destination-links {
+  display: flex;
+  position: relative;
+  bottom: 50px;
+  width: 100%;
+  height: 50%;
+}
+
+.nav-destination-links li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nav-destination-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-destination-btn:hover {
+  border-bottom: 2px solid #aaa;
+}
+
+.nav-destination-btn:active {
+  border-bottom: 2px solid #fff;
+}
+
+.title-destination {
+  font-size: 120px;
+}
+
+.title-desc-container {
+  flex-basis: 100%;
+}
+
+.title-desc-container hr {
+  width: 60%;
+}
+
+.destination-description {
+  width: 60%;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.details-container {
+  margin-top: 5%;
+  display: flex;
+}
+
+.details {
+  margin-right: 10%;
+}
+
+.detail-title {
+  color: var(--subTextColor);
+  padding-bottom: 20px;
+}
+
+.detail-content {
+  font-size: 30px;
+}
