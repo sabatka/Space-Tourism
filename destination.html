@@ -56,36 +56,63 @@
 
       <div class="content-container">
         <div class="img-container">
-          <img src="./assets/destination/image-moon.webp" />
+          <img
+            src="assets/destination/image-moon.webp"
+            class="img-destination"
+            id="img-destination-id"
+          />
         </div>
 
         <div class="nav-destination">
           <ul class="nav-destination-links">
-            <li class="nav-destination-btn active" onclick="">HOME</li>
-            <li class="nav-destination-btn" onclick="">DESTINATION</li>
-            <li class="nav-destination-btn" onclick="">CREW</li>
-            <li class="nav-destination-btn" onclick="">TECHNOLOGY</li>
+            <li
+              class="nav-destination-btn active"
+              id="moon-nav"
+              onclick="moonClick()"
+            >
+              MOON
+            </li>
+            <li class="nav-destination-btn" id="mars-nav" onclick="marsClick()">
+              MARS
+            </li>
+            <li
+              class="nav-destination-btn"
+              id="europa-nav"
+              onclick="europaClick()"
+            >
+              EUROPA
+            </li>
+            <li
+              class="nav-destination-btn"
+              id="titan-nav"
+              onclick="titanClick()"
+            >
+              TITAN
+            </li>
           </ul>
 
           <div class="title-desc-container">
-            <div class="title-destination">MOON</div>
-            <div class="destination-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              inventore laborum vel fuga eum nisi. Ut, ab velit illo, aspernatur
-              omnis incidunt deserunt dolorum fugiat perspiciatis impedit sequi
-              beatae similique.
+            <div class="title-destination" id="title-destination-id">MOON</div>
+            <div
+              class="destination-description"
+              id="destination-description-id"
+            >
+              See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed.
+              While you’re there, take in some history by visiting the Luna 2
+              and Apollo 11 landing sites.
             </div>
 
             <hr />
             <div class="details-container">
               <div class="details">
                 <p class="detail-title">AVG. DISTANCE</p>
-                <p class="detail-content">386,000 KM</p>
+                <p class="detail-content" id="travel-distance">384,400 KM</p>
               </div>
 
               <div class="details">
                 <p class="detail-title">EST. TRAVEL TIME</p>
-                <p class="detail-content">3 DAYS</p>
+                <p class="detail-content" id="travel-time">3 DAYS</p>
               </div>
             </div>
           </div>
@@ -93,5 +120,5 @@
       </div>
     </main>
   </body>
-  <script src="./js/script.js"></script>
+  <script src="./js/script.js" type="text/javascript"></script>
 </html>
