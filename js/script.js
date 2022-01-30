@@ -18,6 +18,13 @@ const crewSelector2 = document.getElementById("selector2");
 const crewSelector3 = document.getElementById("selector3");
 const crewSelector4 = document.getElementById("selector4");
 
+const techImg = document.getElementById("tech-img");
+const techTitle = document.getElementById("title-tech-id");
+const techDescription = document.getElementById("tech-description-id");
+const techPicker1 = document.getElementById("picker1");
+const techPicker2 = document.getElementById("picker2");
+const techPicker3 = document.getElementById("picker3");
+
 window.transitionToPage = function(href){
     document.querySelector('body').style.opacity = 0
     setTimeout(function(){
@@ -167,6 +174,62 @@ function anoClick(){
     .catch(function(err){
         console.log(err);
     });    
+}
+
+function tech1OnClick(){
+    fetch('data.json')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function (data){
+        techTitle.innerHTML = data.technology[0].name.toUpperCase();
+        techImg.src = data.technology[0].images.portrait;
+        techDescription.innerHTML = data.technology[0].description;
+        activePicker(techPicker1);
+    })
+    .catch(function(err){
+        console.log(err);
+    });    
+}
+
+function tech2OnClick(){
+    fetch('data.json')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function (data){
+        techTitle.innerHTML = data.technology[1].name.toUpperCase();
+        techImg.src = data.technology[1].images.portrait;
+        techDescription.innerHTML = data.technology[1].description;
+        activePicker(techPicker2);
+    })
+    .catch(function(err){
+        console.log(err);
+    });    
+}
+
+function tech3OnClick(){
+    fetch('data.json')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function (data){
+        techTitle.innerHTML = data.technology[2].name.toUpperCase();
+        techImg.src = data.technology[2].images.portrait;
+        techDescription.innerHTML = data.technology[2].description;
+        activePicker(techPicker3);
+    })
+    .catch(function(err){
+        console.log(err);
+    });    
+}
+
+function activePicker(elem){
+    let elems = document.querySelectorAll('.picker-active');
+    [].forEach.call(elems, function(el) {
+      el.classList.remove('picker-active');
+    });
+    elem.classList.add('picker-active');
 }
 
 function activateSelector(elem){
