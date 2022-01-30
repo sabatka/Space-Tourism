@@ -9,6 +9,15 @@ const marsNav = document.getElementById("mars-nav");
 const europaNav = document.getElementById("europa-nav");
 const titanNav = document.getElementById("titan-nav");
 
+const crewImg = document.getElementById("crew-img");
+const crewRole = document.getElementById("crew-role-id");
+const crewName = document.getElementById("title-crew-id");
+const crewBio = document.getElementById("crew-description-id");
+const crewSelector1 = document.getElementById("selector1");
+const crewSelector2 = document.getElementById("selector2");
+const crewSelector3 = document.getElementById("selector3");
+const crewSelector4 = document.getElementById("selector4");
+
 window.transitionToPage = function(href){
     document.querySelector('body').style.opacity = 0
     setTimeout(function(){
@@ -92,10 +101,86 @@ function titanClick(){
     });    
 }
 
+function douglasClick(){
+    fetch('data.json')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function (data){
+        crewName.innerHTML = data.crew[0].name.toUpperCase();
+        crewImg.src = data.crew[0].images.webp;
+        crewRole.innerHTML = data.crew[0].role.toUpperCase();
+        crewBio.innerHTML = data.crew[0].bio;
+        activateSelector(crewSelector1);
+    })
+    .catch(function(err){
+        console.log(err);
+    });    
+}
+
+function markClick(){
+    fetch('data.json')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function (data){
+        crewName.innerHTML = data.crew[1].name.toUpperCase();
+        crewImg.src = data.crew[1].images.webp;
+        crewRole.innerHTML = data.crew[1].role.toUpperCase();
+        crewBio.innerHTML = data.crew[1].bio;
+        activateSelector(crewSelector2);
+    })
+    .catch(function(err){
+        console.log(err);
+    });    
+}
+
+function victorClick(){
+    fetch('data.json')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function (data){
+        crewName.innerHTML = data.crew[2].name.toUpperCase();
+        crewImg.src = data.crew[2].images.webp;
+        crewRole.innerHTML = data.crew[2].role.toUpperCase();
+        crewBio.innerHTML = data.crew[2].bio;
+        activateSelector(crewSelector3);
+    })
+    .catch(function(err){
+        console.log(err);
+    });    
+}
+
+function anoClick(){
+    fetch('data.json')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function (data){
+        crewName.innerHTML = data.crew[3].name.toUpperCase();
+        crewImg.src = data.crew[3].images.webp;
+        crewRole.innerHTML = data.crew[3].role.toUpperCase();
+        crewBio.innerHTML = data.crew[3].bio;
+        activateSelector(crewSelector4);
+    })
+    .catch(function(err){
+        console.log(err);
+    });    
+}
+
+function activateSelector(elem){
+    let elems = document.querySelectorAll('.selector-active');
+  [].forEach.call(elems, function(el) {
+    el.classList.remove('selector-active');
+  });
+  elem.classList.add('selector-active');
+}
+
 function keepActive(elem) {
     moonNav.classList.remove('active');
     marsNav.classList.remove('active');
     titanNav.classList.remove('active');
     europaNav.classList.remove('active');
     elem.classList.add('active');
-  }
+}
