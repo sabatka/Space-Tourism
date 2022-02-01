@@ -185,3 +185,21 @@ header {
   background-color: white;
   color: black;
 }
+
+@media (max-width: 1340px) {
+  header {
+    padding: 0 0 0 50px;
+  }
+
+  .first-text {
+    top: 50px;
+    width: 100%;
+    justify-content: flex-start;
+    left: 0;
+    padding-left: 50px;
+  }
+
+  #top-line {
+    display: none;
+  }
+}

@@ -25,6 +25,8 @@ const techPicker1 = document.getElementById("picker1");
 const techPicker2 = document.getElementById("picker2");
 const techPicker3 = document.getElementById("picker3");
 
+let currentPos = 0;
+
 window.transitionToPage = function(href){
     document.querySelector('body').style.opacity = 0
     setTimeout(function(){
@@ -183,7 +185,8 @@ function tech1OnClick(){
     })
     .then(function (data){
         techTitle.innerHTML = data.technology[0].name.toUpperCase();
-        techImg.src = data.technology[0].images.portrait;
+        verifyWindowSize(techImg,data,0);
+        currentPos = 0;
         techDescription.innerHTML = data.technology[0].description;
         activePicker(techPicker1);
     })
@@ -199,7 +202,8 @@ function tech2OnClick(){
     })
     .then(function (data){
         techTitle.innerHTML = data.technology[1].name.toUpperCase();
-        techImg.src = data.technology[1].images.portrait;
+        verifyWindowSize(techImg,data,1);
+        currentPos = 1;
         techDescription.innerHTML = data.technology[1].description;
         activePicker(techPicker2);
     })
@@ -215,7 +219,8 @@ function tech3OnClick(){
     })
     .then(function (data){
         techTitle.innerHTML = data.technology[2].name.toUpperCase();
-        techImg.src = data.technology[2].images.portrait;
+        verifyWindowSize(techImg,data,2);
+        currentPos = 2;
         techDescription.innerHTML = data.technology[2].description;
         activePicker(techPicker3);
     })
@@ -223,6 +228,32 @@ function tech3OnClick(){
         console.log(err);
     });    
 }
+
+function verifyWindowSize(elem,data, pos){
+    if(window.innerWidth < 1340 || document.documentElement.clientWidth < 1340){
+        elem.src = data.technology[pos].images.landscape;
+    }else{
+        elem.src = data.technology[pos].images.portrait;  
+    }
+}
+
+
+window.addEventListener('resize', function(event) {
+    switch(currentPos){
+        case 0:
+            tech1OnClick();
+            break;
+
+        case 1:
+            tech2OnClick();
+            break;
+
+        case 2:
+            tech3OnClick();
+            break;
+    }
+
+}, true);
 
 function activePicker(elem){
     let elems = document.querySelectorAll('.picker-active');

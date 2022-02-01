@@ -135,7 +135,7 @@ header {
 }
 
 .crew-role {
-  color: #aaa;
+  color: var(--subTextColor);
   padding-bottom: 30px;
 }
 
@@ -143,6 +143,7 @@ header {
   width: 60%;
   margin-bottom: 30px;
   font-size: 25px;
+  color: var(--subTextColor);
 }
 
 .crew-selector {
@@ -177,4 +178,74 @@ header {
   position: relative;
   top: 170px;
   left: 100px;
+}
+
+@media (max-width: 1340px) {
+  header {
+    padding: 0 0 0 50px;
+  }
+
+  .logo {
+    padding-top: 20px;
+  }
+
+  .first-text {
+    top: 50px;
+    width: 100%;
+    justify-content: flex-start;
+    left: 0;
+    padding-left: 50px;
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  .crew-selector {
+    position: relative;
+    bottom: 0;
+    justify-content: center;
+  }
+
+  .title-crew {
+    font-size: 40px;
+    padding-bottom: 10px;
+  }
+
+  .title-crew-container {
+    text-align: center;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    left: 0;
+  }
+
+  .crew-description {
+    width: 100%;
+    font-size: 20px;
+    padding-right: 25%;
+    padding-left: 25%;
+  }
+
+  .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 100px;
+  }
+
+  .crew-role {
+    padding-bottom: 10px;
+  }
+
+  #crew-img {
+    width: 400px;
+  }
+
+  #top-line {
+    display: none;
+  }
 }
