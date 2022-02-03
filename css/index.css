@@ -44,6 +44,11 @@ header {
   padding: 50px 0 10px 50px;
 }
 
+span {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
 .logo-container {
   display: flex;
   align-items: center;
@@ -149,6 +154,10 @@ header {
 @media (max-width: 1340px) {
   header {
     padding: 0 0 0 50px;
+  }
+
+  span {
+    display: none;
   }
 
   .logo {
