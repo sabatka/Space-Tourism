@@ -25,7 +25,23 @@ const techPicker1 = document.getElementById("picker1");
 const techPicker2 = document.getElementById("picker2");
 const techPicker3 = document.getElementById("picker3");
 
+const menuButton = document.querySelector('.menu-button');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+let menuOpen = false;
 let currentPos = 0;
+
+menuButton.addEventListener('click', ()=>{
+    if(!menuOpen){
+        mobileMenu.classList.remove('hidden');
+        menuButton.classList.add('open');
+        menuOpen = true;
+    }else{
+        menuButton.classList.remove('open');
+        mobileMenu.classList.add('hidden');
+        menuOpen = false;
+    }
+})
 
 window.transitionToPage = function(href){
     document.querySelector('body').style.opacity = 0
